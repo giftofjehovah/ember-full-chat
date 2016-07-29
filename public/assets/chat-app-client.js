@@ -738,7 +738,7 @@ define('chat-app-client/services/socketio', ['exports', 'ember'], function (expo
     left: function left() {
       var _this6 = this;
 
-      socket.on('joined', function (user) {
+      socket.on('left', function (user) {
         console.log(user.name + ' left the chat.');
         _this6.trigger('left', user);
       });
@@ -5216,7 +5216,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("chat-app-client/app")["default"].create({"name":"chat-app-client","version":"0.0.0+2d95b681"});
+  require("chat-app-client/app")["default"].create({"name":"chat-app-client","version":"0.0.0+91ce308b"});
 }
 
 /* jshint ignore:end */
