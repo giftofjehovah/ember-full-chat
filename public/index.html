@@ -1,52 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ChatAppClient</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simple Chat</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+
+    <base href="/" />
+<meta name="chat-app-client/config/environment" content="%7B%22modulePrefix%22%3A%22chat-app-client%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22chat-app-client%22%2C%22version%22%3A%220.0.0+2d95b681%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/chat-app-client.css">
+
+    
   </head>
   <body>
     
-    <div class="container">
-      <h1>Simple Chat <span id="status" class="label label-default">loading</span></h1>
 
-      <section id="join" class="well hidden">
-        <form id="JoinForm" class="form-inline text-right">
-            <fieldset>
-              <input type="text" class="form-control " placeholder="Your name" autocomplete="off" required autofocus />
-              <button id="sendJoin" class="btn btn-success" disabled>Join</button>
-            </fieldset>
-        </form>
-      </section>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/chat-app-client.js"></script>
 
-      <main class="panel panel-default hidden">
-        <div class="panel-heading">
-          <form id="MessageForm" class="form-inline text-right">
-            <fieldset>
-              <input type="text" class="form-control " placeholder="say what?" autocomplete="off"  required autofocus  />
-              <button id="sendMessage" class="btn btn-success" disabled>Send</button>
-            </fieldset>
-          </form>
-        </div>
-        <section class="panel-body">
-          <div class="text-center"><small id="connected"></small></div>
-          <hr>
-          <div id="messages">
-
-          </div>
-        </section>
-      </main>
-    </div>
     
-  <!-- Socket.io -->
-  <script src="//cdn.socket.io/socket.io-1.4.5.js"></script>
-  <!-- JQuery -->
-  <script src="//code.jquery.com/jquery-1.11.1.js"></script>
-  <!-- main client js -->
-  <script src="js/client.js"></script>
   </body>
 </html>
